@@ -9,5 +9,12 @@ export const fetchKanyeism = () => {
             dispatch({ type: 'FETCHING_DATA_SUCCESS', payload: res.data })
         })
         .catch(err => console.log(err))
+        axios.get('https://api.gfycat.com/v1/gfycats/search?search_text=kanye')
+        .then (res => {
+        console.log(res.data.gfycats)
+        dispatch({ type: 'KANYE_GIF', payload: res.data.gfycats})
+    })
+    .catch(err => console.log(err))
     };
 };
+

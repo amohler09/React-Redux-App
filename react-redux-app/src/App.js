@@ -6,7 +6,6 @@ import Kanyeism from './components/Kanyeism'
 function App() {
   return (
     <div className="App">
-      <h1>Kanyeism Of The Day</h1>
       <Kanyeism />
         
     </div>

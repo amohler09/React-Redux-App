@@ -1,7 +1,8 @@
 export const initialState = {
     isLoading: null,
     activity: {},
-    error: ''
+    error: '',
+    gif: []
 };
 
 
@@ -18,6 +19,12 @@ export const reducer = (state = initialState, action) => {
                 isLoading: false,
                 activity: action.payload
             };
+        case 'KANYE_GIF':
+            return {
+                ...state,
+                isLoading: false,
+                gif: action.payload
+            }
         default:
         return state;
     }
